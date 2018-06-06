@@ -14,6 +14,9 @@
 		BE4BEB5820C83A7400CD1032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE4BEB5620C83A7400CD1032 /* LaunchScreen.storyboard */; };
 		BE4BEB6320C83A7400CD1032 /* Ryo_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB6220C83A7400CD1032 /* Ryo_TrackerTests.swift */; };
 		BE4BEB6E20C83A7400CD1032 /* Ryo_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB6D20C83A7400CD1032 /* Ryo_TrackerUITests.swift */; };
+		BE4BEB7C20C83D2000CD1032 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */; };
+		BE4BEB7E20C83D3700CD1032 /* JSONStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */; };
+		BE4BEB8020C83D6600CD1032 /* MarketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7F20C83D6600CD1032 /* MarketViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		BE4BEB6920C83A7400CD1032 /* Ryo TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Ryo TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4BEB6D20C83A7400CD1032 /* Ryo_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ryo_TrackerUITests.swift; sourceTree = "<group>"; };
 		BE4BEB6F20C83A7400CD1032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
+		BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStructures.swift; sourceTree = "<group>"; };
+		BE4BEB7F20C83D6600CD1032 /* MarketViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +104,12 @@
 			isa = PBXGroup;
 			children = (
 				BE4BEB4D20C83A7400CD1032 /* AppDelegate.swift */,
+				BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */,
 				BE4BEB4F20C83A7400CD1032 /* ViewController.swift */,
 				BE4BEB5120C83A7400CD1032 /* Main.storyboard */,
 				BE4BEB5420C83A7400CD1032 /* Assets.xcassets */,
+				BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */,
+				BE4BEB7F20C83D6600CD1032 /* MarketViewController.swift */,
 				BE4BEB5620C83A7400CD1032 /* LaunchScreen.storyboard */,
 				BE4BEB5920C83A7400CD1032 /* Info.plist */,
 			);
@@ -256,6 +265,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE4BEB7C20C83D2000CD1032 /* HTTPRequest.swift in Sources */,
+				BE4BEB7E20C83D3700CD1032 /* JSONStructures.swift in Sources */,
+				BE4BEB8020C83D6600CD1032 /* MarketViewController.swift in Sources */,
 				BE4BEB5020C83A7400CD1032 /* ViewController.swift in Sources */,
 				BE4BEB4E20C83A7400CD1032 /* AppDelegate.swift in Sources */,
 			);
