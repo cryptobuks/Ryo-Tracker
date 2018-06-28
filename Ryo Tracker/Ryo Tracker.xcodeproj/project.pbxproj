@@ -10,7 +10,6 @@
 		BE4BBB5520D994A9000AADA2 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BBB4820D99483000AADA2 /* Alamofire.framework */; };
 		BE4BBB5620D994A9000AADA2 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BBB4820D99483000AADA2 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE4BBB5B20D9969C000AADA2 /* Exchange.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BBB5A20D9969C000AADA2 /* Exchange.swift */; };
-		BE4BBB6520D9ABF4000AADA2 /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = BE4BBB5D20D9ABF4000AADA2 /* Header.png */; };
 		BE4BBB6F20DA762F000AADA2 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BBB6C20D9B449000AADA2 /* Charts.framework */; };
 		BE4BBB7020DA762F000AADA2 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BE4BBB6C20D9B449000AADA2 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BE4BEB4E20C83A7400CD1032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB4D20C83A7400CD1032 /* AppDelegate.swift */; };
@@ -24,6 +23,7 @@
 		BE4BEB7E20C83D3700CD1032 /* JSONStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */; };
 		BE79958A20E2F3C200A6A3BB /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79958920E2F3C200A6A3BB /* DataStructures.swift */; };
 		BE79958C20E2FEBD00A6A3BB /* DataSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79958B20E2FEBD00A6A3BB /* DataSorting.swift */; };
+		BE79958E20E4D25900A6A3BB /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = BE79958D20E4D25800A6A3BB /* Header.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -138,7 +138,6 @@
 /* Begin PBXFileReference section */
 		BE4BBB3C20D99482000AADA2 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = ../../../../Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		BE4BBB5A20D9969C000AADA2 /* Exchange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exchange.swift; sourceTree = "<group>"; };
-		BE4BBB5D20D9ABF4000AADA2 /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Header.png; path = "../../../../RT Images/Header.png"; sourceTree = "<group>"; };
 		BE4BBB6620D9B449000AADA2 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/Charts-master-2/Charts.xcodeproj"; sourceTree = "<group>"; };
 		BE4BEB4A20C83A7400CD1032 /* Ryo Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ryo Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE4BEB4D20C83A7400CD1032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +156,7 @@
 		BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStructures.swift; sourceTree = "<group>"; };
 		BE79958920E2F3C200A6A3BB /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
 		BE79958B20E2FEBD00A6A3BB /* DataSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSorting.swift; sourceTree = "<group>"; };
+		BE79958D20E4D25800A6A3BB /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,11 +237,11 @@
 				BE4BEB4D20C83A7400CD1032 /* AppDelegate.swift */,
 				BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */,
 				BE79958B20E2FEBD00A6A3BB /* DataSorting.swift */,
+				BE79958D20E4D25800A6A3BB /* Header.png */,
 				BE4BEB4F20C83A7400CD1032 /* MarketController.swift */,
 				BE4BEB5120C83A7400CD1032 /* Main.storyboard */,
 				BE4BEB5420C83A7400CD1032 /* Assets.xcassets */,
 				BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */,
-				BE4BBB5D20D9ABF4000AADA2 /* Header.png */,
 				BE4BEB5620C83A7400CD1032 /* LaunchScreen.storyboard */,
 				BE4BEB5920C83A7400CD1032 /* Info.plist */,
 				BE4BBB5A20D9969C000AADA2 /* Exchange.swift */,
@@ -453,7 +453,7 @@
 			files = (
 				BE4BEB5820C83A7400CD1032 /* LaunchScreen.storyboard in Resources */,
 				BE4BEB5520C83A7400CD1032 /* Assets.xcassets in Resources */,
-				BE4BBB6520D9ABF4000AADA2 /* Header.png in Resources */,
+				BE79958E20E4D25900A6A3BB /* Header.png in Resources */,
 				BE4BEB5320C83A7400CD1032 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
