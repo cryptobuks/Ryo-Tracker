@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         //var negativeColor = UIColor.red
         
         // Send HTTP requests every 10 seconds to update data
-        requestTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { timer in
+        requestTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { timer in
             //
             HTTPRequest.requestTicker(exchange: self.exchange.getExchange(), url: self.exchange.getTickerURL()) {ticker in
                 if self.exchange.getExchange() == exchangeVal.tradeogre.rawValue {
@@ -67,8 +67,8 @@ class ViewController: UIViewController {
             HTTPRequest.requestTradeBin(exchange: self.exchange.getExchange(), url: self.exchange.getTradeBinURL()) { tradeBin in
                 if self.exchange.getExchange() == exchangeVal.tradeogre.rawValue {
                     let toTradeBin = tradeBin as! [TOTradeBin]
-                    let timeBucket = TimeBucket.init(tradeBin: toTradeBin, size: 50)
-                    print(timeBucket.prices)
+                    let timeBucket = HourlyTimeBucket.init(tradeBin: toTradeBin, size: 70)
+                    print(timeBucket)
                 }
                 
             }
