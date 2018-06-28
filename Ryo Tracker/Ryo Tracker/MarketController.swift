@@ -9,7 +9,7 @@
 import UIKit
 import Charts
 
-class ViewController: UIViewController {
+class MarketController: UIViewController {
 
     @IBOutlet weak var candleStickChartView: CandleStickChartView!
     private var exchange = Exchange.init()
@@ -33,8 +33,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        //var positiveColor = changeLabel.textColor
-        //var negativeColor = UIColor.red
+        
         
         // Send HTTP requests every 10 seconds to update data
         requestTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { timer in
@@ -53,12 +52,12 @@ class ViewController: UIViewController {
                     
                     self.percentChange = 100.0*(tPrice/tInitialPrice-1.0)
                     if self.percentChange >= 0 {
-                        self.changeLabel.text = String("+" + String(format: "%.2f",self.percentChange) + "%")
-                        //self.changeLabel.textColor = positiveColor
+                        self.changeLabel.text = String("  +" + String(format: "%.2f",self.percentChange) + "%")
+                        self.changeLabel.textColor = UIColor.init(red: 39, green: 146, blue: 4, alpha: 256)
                         
                     } else {
-                        self.changeLabel.text = String(String(format: "%.2f", self.percentChange) + "%")
-                        //self.changeLabel.textColor = negativeColor
+                        self.changeLabel.text = String("  " + String(format: "%.2f", self.percentChange) + "%")
+                        self.changeLabel.textColor = UIColor.red
                     }
                     
                 }
@@ -68,7 +67,8 @@ class ViewController: UIViewController {
                 if self.exchange.getExchange() == exchangeVal.tradeogre.rawValue {
                     let toTradeBin = tradeBin as! [TOTradeBin]
                     let timeBucket = HourlyTimeBucket.init(tradeBin: toTradeBin, size: 70)
-                    print(timeBucket)
+                    let ohlcForm = OHLCForm.init(hourlyBucket: timeBucket)
+                    print(ohlcForm)
                 }
                 
             }

@@ -9,31 +9,42 @@
 import Foundation
 
 struct OHLCForm {
-    public var date: Date
-    public var open: Double
-    public var high: Double
-    public var low: Double
-    public var close: Double
+    public var length: Int
+    public var date: [Date]
+    public var open: [Double]
+    public var high: [Double]
+    public var low: [Double]
+    public var close: [Double]
     
-    init () {
-        date = Date.init()
-        open = 0.0
-        high = 0.0
-        low = 0.0
-        close = 0.0
+    init(hourlyBucket: HourlyTimeBucket) {
+        length = hourlyBucket.length
+        date = Array(repeating: Date.init(), count: length)
+        open = Array(repeating: 0.0, count: length)
+        high = Array(repeating: 0.0, count: length)
+        low = Array(repeating: 0.0, count: length)
+        close = Array(repeating: 0.0, count: length)
+        for i in 0...length-1 {
+            date[i] = hourlyBucket.bucketStartDate[i]
+            open[i] = hourlyBucket.pricesBin[i][0]
+            high[i] = hourlyBucket.pricesBin[i].max()!
+            low[i] = hourlyBucket.pricesBin[i].min()!
+            close[i] = hourlyBucket.pricesBin[i][hourlyBucket.pricesBin[i].count-1]
+        }
     }
 }
 
 struct HourlyTimeBucket {
+    public var length : Int
     public var bucketHour : [Int]
     public var bucketStartDate : [Date]
     public var bucketEndDate : [Date]
     public var pricesBin : [[Double]]
     
     init (tradeBin: [TOTradeBin], size: Int) {
+        length = size
         bucketHour = Array(repeating: 0, count: size)
-        bucketStartDate = Array(repeating: Date.init().addingTimeInterval(-3600.0), count: size)
-        bucketEndDate = Array(repeating: Date.init(), count: size)
+        bucketStartDate = Array(repeating: roundDownStart(date: Date.init()), count: size)
+        bucketEndDate = Array(repeating: roundUpEnd(date: Date.init()), count: size)
         pricesBin = Array(repeating: [0.0], count: size)
         let timeScale = -Double((size-1)*3600)
         
@@ -61,8 +72,8 @@ struct HourlyTimeBucket {
         }
         
         //Find the first price if the first time bin is empty
-        let firstPrice: Double
-        var isFirstBinEmpty = (pricesBin[0] == [0.0])
+        var firstPrice = 0.0
+        let isFirstBinEmpty = (pricesBin[0] == [0.0])
         if isFirstBinEmpty == true {
             for prices in pricesBin {
                 if prices == [0.0] { continue }
@@ -76,19 +87,26 @@ struct HourlyTimeBucket {
             firstPrice = pricesBin[0][0]
         }
         
+        pricesBin = removeZeros(input: pricesBin)
+        
     }
     
+    // Convert unix time stamp to date
     func unixToDate(unixTimeStamp: Int) -> Date {
         return Date(timeIntervalSince1970: Double(unixTimeStamp))
     }
     
+    // Fill in zero values with last values
     func removeZeros(input: [[Double]]) -> [[Double]] {
-        for i in 0...input.count-1 {
-            if input[i] == [0.0] {
-                input[i] = input[i][0]
+        var output = input
+        for i in 0...output.count-1 {
+            if output[i] == [0.0] {
+                output[i][0] = output[i-1][output[i-1].count-1]
             }
         }
+        return output
     }
+    
+    
 }
-
 
