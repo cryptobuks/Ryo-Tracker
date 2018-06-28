@@ -57,16 +57,18 @@ class ViewController: UIViewController {
                         //self.changeLabel.textColor = positiveColor
                         
                     } else {
-                        self.changeLabel.text = String(String(self.percentChange) + "%")
+                        self.changeLabel.text = String(String(format: "%.2f", self.percentChange) + "%")
                         //self.changeLabel.textColor = negativeColor
                     }
                     
                 }
             }
+            
             HTTPRequest.requestTradeBin(exchange: self.exchange.getExchange(), url: self.exchange.getTradeBinURL()) { tradeBin in
                 if self.exchange.getExchange() == exchangeVal.tradeogre.rawValue {
-                    //let toTradeBin = tradeBin as! TOTradeBin
-                    
+                    let toTradeBin = tradeBin as! [TOTradeBin]
+                    let timeBucket = TimeBucket.init(tradeBin: toTradeBin, size: 50)
+                    print(timeBucket.prices)
                 }
                 
             }
