@@ -22,6 +22,8 @@
 		BE4BEB6E20C83A7400CD1032 /* Ryo_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB6D20C83A7400CD1032 /* Ryo_TrackerUITests.swift */; };
 		BE4BEB7C20C83D2000CD1032 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */; };
 		BE4BEB7E20C83D3700CD1032 /* JSONStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */; };
+		BE79958A20E2F3C200A6A3BB /* DataStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79958920E2F3C200A6A3BB /* DataStructures.swift */; };
+		BE79958C20E2FEBD00A6A3BB /* DataSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79958B20E2FEBD00A6A3BB /* DataSorting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -153,6 +155,8 @@
 		BE4BEB6F20C83A7400CD1032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStructures.swift; sourceTree = "<group>"; };
+		BE79958920E2F3C200A6A3BB /* DataStructures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStructures.swift; sourceTree = "<group>"; };
+		BE79958B20E2FEBD00A6A3BB /* DataSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSorting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,6 +236,7 @@
 			children = (
 				BE4BEB4D20C83A7400CD1032 /* AppDelegate.swift */,
 				BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */,
+				BE79958B20E2FEBD00A6A3BB /* DataSorting.swift */,
 				BE4BEB4F20C83A7400CD1032 /* MarketController.swift */,
 				BE4BEB5120C83A7400CD1032 /* Main.storyboard */,
 				BE4BEB5420C83A7400CD1032 /* Assets.xcassets */,
@@ -240,6 +245,7 @@
 				BE4BEB5620C83A7400CD1032 /* LaunchScreen.storyboard */,
 				BE4BEB5920C83A7400CD1032 /* Info.plist */,
 				BE4BBB5A20D9969C000AADA2 /* Exchange.swift */,
+				BE79958920E2F3C200A6A3BB /* DataStructures.swift */,
 			);
 			path = "Ryo Tracker";
 			sourceTree = "<group>";
@@ -473,8 +479,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE79958C20E2FEBD00A6A3BB /* DataSorting.swift in Sources */,
 				BE4BEB7C20C83D2000CD1032 /* HTTPRequest.swift in Sources */,
 				BE4BBB5B20D9969C000AADA2 /* Exchange.swift in Sources */,
+				BE79958A20E2F3C200A6A3BB /* DataStructures.swift in Sources */,
 				BE4BEB7E20C83D3700CD1032 /* JSONStructures.swift in Sources */,
 				BE4BEB5020C83A7400CD1032 /* MarketController.swift in Sources */,
 				BE4BEB4E20C83A7400CD1032 /* AppDelegate.swift in Sources */,

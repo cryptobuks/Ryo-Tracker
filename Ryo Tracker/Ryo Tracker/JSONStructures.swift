@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct TOTicker : Decodable {
+struct TOTicker : Codable {
     public var success : Bool
     public var initialprice : String
     public var price : String
@@ -17,6 +17,13 @@ struct TOTicker : Decodable {
     public var volume : String
     public var bid : String
     public var ask : String
+}
+
+struct TOTradeBin : Codable {
+    public var date : Int
+    public var type : String
+    public var price : String
+    public var quantity : String
 }
 
 struct MCTicker : Codable {
@@ -31,4 +38,11 @@ struct MCTicker : Codable {
         public var volbtc : Double?
         public var change : Double?
     }
+}
+
+struct MCTradeBin : Codable {
+    public var date : Int
+    public var type : String
+    public var price : String
+    public var quantity : String
 }
