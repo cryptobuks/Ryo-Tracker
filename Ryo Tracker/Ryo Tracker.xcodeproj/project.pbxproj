@@ -17,13 +17,12 @@
 		BE4BEB6E20C83A7400CD1032 /* Ryo_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB6D20C83A7400CD1032 /* Ryo_TrackerUITests.swift */; };
 		BE4BEB7C20C83D2000CD1032 /* HTTPRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */; };
 		BE4BEB7E20C83D3700CD1032 /* JSONStructures.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */; };
+		BE7833F020E6E10F0083196A /* PortfolioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE7833EF20E6E10F0083196A /* PortfolioController.swift */; };
 		BE79958A20E2F3C200A6A3BB /* MarketDataHandling.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE79958920E2F3C200A6A3BB /* MarketDataHandling.swift */; };
 		BE79958E20E4D25900A6A3BB /* Header.png in Resources */ = {isa = PBXBuildFile; fileRef = BE79958D20E4D25800A6A3BB /* Header.png */; };
 		BEAA087A20E4D51C008AEDA9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA086C20E4D50C008AEDA9 /* Alamofire.framework */; };
-		BEAA088420E4D531008AEDA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA088120E4D525008AEDA9 /* Charts.framework */; };
 		BEAA08A620E516DB008AEDA9 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA088120E4D525008AEDA9 /* Charts.framework */; };
 		BEAA08A720E516DB008AEDA9 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA088120E4D525008AEDA9 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BEAA08AA20E516DB008AEDA9 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA086C20E4D50C008AEDA9 /* Alamofire.framework */; };
 		BEAA08AB20E516DB008AEDA9 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BEAA086C20E4D50C008AEDA9 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BEAA08E720E58141008AEDA9 /* UtilityFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA08E620E58141008AEDA9 /* UtilityFunctions.swift */; };
 		BEAA08EF20E59885008AEDA9 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEAA08EE20E59885008AEDA9 /* NewsController.swift */; };
@@ -155,6 +154,7 @@
 		BE4BEB6F20C83A7400CD1032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPRequest.swift; sourceTree = "<group>"; };
 		BE4BEB7D20C83D3700CD1032 /* JSONStructures.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONStructures.swift; sourceTree = "<group>"; };
+		BE7833EF20E6E10F0083196A /* PortfolioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortfolioController.swift; sourceTree = "<group>"; };
 		BE79958920E2F3C200A6A3BB /* MarketDataHandling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketDataHandling.swift; sourceTree = "<group>"; };
 		BE79958D20E4D25800A6A3BB /* Header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Header.png; sourceTree = "<group>"; };
 		BEAA086020E4D50B008AEDA9 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../../Framworks Swift/Alamofire/Alamofire.xcodeproj"; sourceTree = "<group>"; };
@@ -169,9 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEAA08A620E516DB008AEDA9 /* Charts.framework in Frameworks */,
-				BEAA088420E4D531008AEDA9 /* Charts.framework in Frameworks */,
 				BEAA087A20E4D51C008AEDA9 /* Alamofire.framework in Frameworks */,
-				BEAA08AA20E516DB008AEDA9 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +218,7 @@
 			children = (
 				BE4BEB4D20C83A7400CD1032 /* AppDelegate.swift */,
 				BEAA08EE20E59885008AEDA9 /* NewsController.swift */,
+				BE7833EF20E6E10F0083196A /* PortfolioController.swift */,
 				BE4BEB7B20C83D2000CD1032 /* HTTPRequest.swift */,
 				BE79958D20E4D25800A6A3BB /* Header.png */,
 				BE4BEB4F20C83A7400CD1032 /* MarketController.swift */,
@@ -503,6 +502,7 @@
 				BE4BEB5020C83A7400CD1032 /* MarketController.swift in Sources */,
 				BEAA08E720E58141008AEDA9 /* UtilityFunctions.swift in Sources */,
 				BE4BEB4E20C83A7400CD1032 /* AppDelegate.swift in Sources */,
+				BE7833F020E6E10F0083196A /* PortfolioController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -46,12 +46,13 @@ struct HourlyTimeBucket {
         bucketStartDate = Array(repeating: roundDownStart(date: Date.init()), count: size)
         bucketEndDate = Array(repeating: roundUpEnd(date: Date.init()), count: size)
         pricesBin = Array(repeating: [0.0], count: size)
-        let timeScale = -Double((size-1)*3600)
+        let anHour = 3600.0
+        let timeScale = -Double((size-1))*anHour
         
         for i in 0...size-1 {
             bucketHour[i] = i+1
-            bucketStartDate[i] = bucketStartDate[size-1].addingTimeInterval(timeScale+Double(i)*3600.0)
-            bucketEndDate[i] = bucketEndDate[size-1].addingTimeInterval(timeScale+Double(i)*3600.0)
+            bucketStartDate[i] = bucketStartDate[size-1].addingTimeInterval(timeScale+Double(i)*anHour)
+            bucketEndDate[i] = bucketEndDate[size-1].addingTimeInterval(timeScale+Double(i)*anHour)
             var firstLoop = true
             
             for trade in tradeBin {
