@@ -98,6 +98,10 @@ class MarketController: UIViewController {
             newsController.inputLabel = changeLabel
             newsController.chartData = chartData
         }
+        if let networkController = segue.destination as? NetworkController {
+            networkController.inputLabel = changeLabel
+            networkController.chartData = chartData
+        }
     }
     
     fileprivate func chartSetup() {

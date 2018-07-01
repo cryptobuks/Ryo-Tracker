@@ -92,11 +92,6 @@ struct HourlyTimeBucket {
         
     }
     
-    // Convert unix time stamp to date
-    func unixToDate(unixTimeStamp: Int) -> Date {
-        return Date(timeIntervalSince1970: Double(unixTimeStamp))
-    }
-    
     // Fill in zero values with last values
     func removeZeros(input: [[Double]]) -> [[Double]] {
         var output = input

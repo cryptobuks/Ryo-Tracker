@@ -46,3 +46,13 @@ struct MCTradeBin : Codable {
     public var price : String
     public var quantity : String
 }
+
+struct NetworkStatistics : Codable {
+    public var difficulty : Double?
+    public var hash : String?
+    public var height : Int?
+    public var reward : Double?
+    public var timeStamp : Int?
+}
+
+
